@@ -1171,9 +1171,9 @@ static void saveLicenseData(scanres_t *scores, int nCand, int nElem,
   if(cur.cliMode) 
   {
     if (optionIsSet(OPTS_LONG_CMD_OUTPUT))
-      printf("File %s contains license(s) %s", cur.targetFile, cur.compLic);
+      printf("%s;%s", cur.targetFile, cur.compLic);
     else
-      printf("File %s contains license(s) %s", basename(cur.targetFile), cur.compLic);
+      printf("%s;%s", basename(cur.targetFile), cur.compLic);
     printHighlightInfo(cur.keywordPositions, cur.theMatches);
   }
   return;
